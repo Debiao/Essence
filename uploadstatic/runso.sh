@@ -1,7 +1,7 @@
 #! /bin/bash
 set -e
 
-SRC=/Users/mac/Documents/workspace/Essence/uploadstatic/source/
+SRC=/Users/mac/Documents/workspace/Essence/uploadstatic/source/50x.html
 DES=/data
 
 echo "Upload to local server Should enter!"
