@@ -17,6 +17,13 @@ expect << EOF
 set timeout 360
 expect Password: {send "789456\r"}
 EOF
+
+sudo chmod -R 777 ${SVN_PATH}
+expect << EOF
+set timeout 360
+expect Password: {send "789456\r"}
+EOF
+
 open ${LOG_PATH}
 
 
