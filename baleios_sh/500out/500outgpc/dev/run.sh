@@ -6,35 +6,41 @@ set -e
 #<------------------------------------------------>                  
 # 上传服务器时用
 #Ipa默认包名
-IPA_NAME=apple.ipa  
+IPA_NAME=dev_500outgpc.ipa  
 #远程服务器上的路径
-SERVER_PATH=/data/bdcf/         
+SERVER_PATH=/data/ios/500out/500outgpc        
 #<------------------------------------------------>  
 
+LOG_PATH=/Users/mac/Documents/temporary/log
+cd ${LOG_PATH}
+rm -rf *
+
+#编译cordova路径
+NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outgpc_dev    # <---------------这里需要修改
+cd ${NPM_RUN_PATH}
+npm run ios-min
 
 #<------------------------------------------------> 
 # 打包api时用
 #工程名
-PROJECT_NAME=500OUT    # <---------------这里需要修改
+PROJECT_NAME=股彩    # <---------------这里需要修改
 #scheme名
-SCHEME_NAME=500OUT    # <---------------这里需要修改
+SCHEME_NAME=股彩    # <---------------这里需要修改
 #<------------------------------------------------> 
 
 
 # 打包时用
 #IOS工程路径
-IOS_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP/platforms/ios       # <---------------这里需要修改
+IOS_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outgpc_dev/platforms/ios       # <---------------这里需要修改
 #判断IPA是否存在路径
-IPADir_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP/platforms/ios/IPADir/Debug   # <---------------这里需要修改
+IPADir_PATH=${IOS_PATH}/IPADir/Debug   # <---------------这里需要修改
 #Plist所在路径
-PLIST_PATH=/Users/mac/Documents/workspace/Essence/perfection/plist         # <---------------这里需要修改
+PLIST_PATH=/Users/mac/Documents/workspace/Essence/project_plist/500out/500outgpc/dev/plist/       # <---------------这里需要修改
 
 #<------------------------------------------------> 
 
 #获取当前时间
 TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
-
-IPA_NAME=dev500OUT.ipa         
 
 #打包ipa#
 cd ${IOS_PATH}
@@ -146,7 +152,7 @@ if [ -f ${IPADir_PATH}/${IPA_NAME} ];then
     #expect "password:" {send "gzxs311.!@#\r"}
 expect << EOF
     set timeout 3600
-    spawn scp -r  ${IPADir_PATH}/${IPA_NAME}  root@192.168.3.11:${SERVER_PATH}
+    spawn scp -r  ${IPADir_PATH}/${IPA_NAME}  root@zt.gzxstech.com:${SERVER_PATH}
     expect "#" {send "exit\r"}
 EOF
 
@@ -168,8 +174,8 @@ echo '/// 发布完成'
 echo '///-------------'
 echo ''
 
-open -a "/Applications/Google Chrome Canary.app" http://192.168.3.11/50.html
-fi
+open -a /Applications/Google\ Chrome.app https://zt.gzxstech.com/50x.html
+
 
 echo ''
 echo '///-------------'

@@ -11,6 +11,14 @@ IPA_NAME=dis_500outgpc.ipa
 SERVER_PATH=/data/ios/500out/500outgpc        
 #<------------------------------------------------>  
 
+LOG_PATH=/Users/mac/Documents/temporary/log
+cd ${LOG_PATH}
+rm -rf *
+
+#编译cordova路径
+NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outgpc_dis    # <---------------这里需要修改
+cd ${NPM_RUN_PATH}
+npm run ios-min
 
 #<------------------------------------------------> 
 # 打包api时用
@@ -167,7 +175,7 @@ echo '///-------------'
 echo ''
 
 open -a /Applications/Google\ Chrome.app https://zt.gzxstech.com/50x.html
-fi
+
 
 echo ''
 echo '///-------------'
