@@ -2,6 +2,8 @@
 #set -ex 调试命令
 #报错直接停止
 set -e     
+#获取当前时间
+TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
 
 #<------------------------------------------------>                  
 # 上传服务器时用
@@ -36,8 +38,7 @@ PLIST_PATH=/Users/mac/Documents/workspace/Essence/project_plist/500out/500outgpc
 
 #<------------------------------------------------> 
 
-#获取当前时间
-TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
+
 
 #打包ipa#
 # cd ${IOS_PATH}
@@ -65,6 +66,8 @@ else
 fi
 
 #删除旧build文件
+
+cd ${PROJECT_PATH}
 rm -rf build
 
 #打包模式 Debug/Release
@@ -83,6 +86,8 @@ exportOptionsPlistPath=${PLIST_PATH}/exportTest.plist
 echo '///-----------'
 echo '/// 正在清理工程'
 echo '///-----------'
+
+cd ${PROJECT_PATH}
 
 xcodebuild \
 clean -configuration ${development_mode} -quiet  || exit

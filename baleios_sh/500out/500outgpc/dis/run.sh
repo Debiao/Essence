@@ -64,6 +64,7 @@ else
 fi
 
 #删除旧build文件
+cd ${PROJECT_PATH}
 rm -rf build
 
 #打包模式 Debug/Release
@@ -82,6 +83,8 @@ exportOptionsPlistPath=${PLIST_PATH}/exportTest.plist
 echo '///-----------'
 echo '/// 正在清理工程'
 echo '///-----------'
+
+cd ${PROJECT_PATH}
 
 xcodebuild \
 clean -configuration ${development_mode} -quiet  || exit
