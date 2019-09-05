@@ -40,9 +40,10 @@ PLIST_PATH=/Users/mac/Documents/workspace/Essence/project_plist/500out/500outgpc
 TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
 
 #打包ipa#
-cd ${IOS_PATH}
+# cd ${IOS_PATH}
 #工程绝对路径
-PROJECT_PATH=$(cd `dirname $0`; pwd)
+#PROJECT_PATH=$(cd `dirname $0`; pwd)
+PROJECT_PATH=${IOS_PATH}
 
 if [ ! -d ./IPADir ];
 then
@@ -82,6 +83,7 @@ exportOptionsPlistPath=${PLIST_PATH}/exportTest.plist
 echo '///-----------'
 echo '/// 正在清理工程'
 echo '///-----------'
+
 xcodebuild \
 clean -configuration ${development_mode} -quiet  || exit
 echo ''
@@ -92,7 +94,7 @@ echo '///--------'
 echo ''
 
 echo '///-----------'
-echo '/// 正在编译工程:'${development_mode}
+echo '/// 正在编译工程:' ${development_mode}
 echo '///-----------'
 echo ''
 
