@@ -11,9 +11,6 @@ IPA_NAME=dev_500outgpc.ipa
 SERVER_PATH=/data/ios/500out/500outgpc        
 #<------------------------------------------------>  
 
-LOG_PATH=/Users/mac/Documents/temporary/log
-cd ${LOG_PATH}
-rm -rf *
 
 #编译cordova路径
 NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outgpc_dev    # <---------------这里需要修改

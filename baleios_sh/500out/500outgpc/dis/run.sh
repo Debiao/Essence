@@ -2,6 +2,8 @@
 #set -ex 调试命令
 #报错直接停止
 set -e     
+#获取当前时间
+TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
 
 #<------------------------------------------------>                  
 # 上传服务器时用
@@ -11,9 +13,6 @@ IPA_NAME=dis_500outgpc.ipa
 SERVER_PATH=/data/ios/500out/500outgpc        
 #<------------------------------------------------>  
 
-LOG_PATH=/Users/mac/Documents/temporary/log
-cd ${LOG_PATH}
-rm -rf *
 
 #编译cordova路径
 NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outgpc_dis    # <---------------这里需要修改
@@ -38,9 +37,6 @@ IPADir_PATH=${IOS_PATH}/IPADir/Debug   # <---------------这里需要修改
 PLIST_PATH=/Users/mac/Documents/workspace/Essence/project_plist/500out/500outgpc/dis/plist/       # <---------------这里需要修改
 
 #<------------------------------------------------> 
-
-#获取当前时间
-TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
 
 #打包ipa#
 cd ${IOS_PATH}
