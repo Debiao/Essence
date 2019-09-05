@@ -8,7 +8,7 @@ ERROR_PATH=/Users/mac/Documents/temporary/log
 
 if [ -f ${ERROR_PATH}/error.log ];then
         cp ${ERROR_PATH}/error.log ${ERROR_PATH}/${TIME}error.log
-       # rm -rf ${ERRORFILE_PATH}
+        rm -rf ${ERROR_PATH}/error.log
         if [ $? -eq 0 ];then
         echo  "log备份成功"
         else
@@ -17,3 +17,5 @@ if [ -f ${ERROR_PATH}/error.log ];then
     else
         echo '!!!' ${ERRORFILE_PATH} '不存在'
 fi 
+
+open ${ERROR_PATH}
