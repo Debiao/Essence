@@ -1,4 +1,5 @@
 #!/bin/bash
+TIME=$(date "+%Y-%m-%d-%H-%M-%S")
 #script name : sendemail.sh
 VERSION_FILE=/Users/mac/Documents/temporary/log/svn
 # 2200170656@qq.com 丘 sunshuo_1990@126.com
