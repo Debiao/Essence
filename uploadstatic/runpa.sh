@@ -1,11 +1,13 @@
 #! /bin/bash
 set -e
 
-SRC=/Users/mac/Documents/workspace/Essence/uploadstatic/package/dis_500cai.ipa
+# SRC=/Users/mac/Documents/workspace/Essence/uploadstatic/package/dis_500cai.ipa
 # SRC=/Users/mac/Documents/workspace/Essence/uploadstatic/package/dis_500outgpc.ipa
+SRC=/Users/mac/Documents/workspace/Essence/uploadstatic/package/dev_500out.ipa
 # DES=/data/ios/500out/500out
-DES=/data/ios/500out/500cai
+# DES=/data/ios/500out/500cai
 # DES=/data/ios/500out/500outgpc
+DES=/data/ios/500out/500out
 
 echo "Upload to local server Should enter!"
 
