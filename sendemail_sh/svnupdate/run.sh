@@ -1,5 +1,4 @@
 #!/bin/bash
-TIME=$(date "+%Y-%m-%d-%H-%M-%S")
 #script name : sendemail.sh
 VERSION_FILE=/Users/mac/Documents/temporary/log/svn
 # 2200170656@qq.com 丘 sunshuo_1990@126.com
@@ -27,7 +26,7 @@ path=${VERSION_FILE}
 files=$(ls $path)
 for filename in $files
 do
-names[${#names[@]}]="&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"$filename"&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"$(grep -i "revision" ${VERSION_FILE}/$filename)"<br>"
+names[${#names[@]}]="&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${filename%--*}"&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"$(grep -i "revision" ${VERSION_FILE}/$filename)"<br>"
 # echo $(grep -i '^Updated' ${VERSION_FILE}/$filename)
 # contentone="<br>"$(grep -i '^Updated' ${VERSION_FILE}/$filename)
 done

@@ -2,10 +2,11 @@
 #set -ex 调试命令
 #报错直接停止
 set -e     
-TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
+TIME=$(date "+%Y-%m-%d-%H-%M-%S--")
 ERROR_PATH=/Users/mac/Documents/temporary/log/svn
 #<------------------------------------------------> 
-
+find ${ERROR_PATH} -mtime +2 -name "*.log" -exec rm -rf {} \;
+#>> /dev/null 2>&1
 if [ -f ${ERROR_PATH}/error.log ];then
         cp ${ERROR_PATH}/error.log ${ERROR_PATH}/${TIME}error.log
         rm -rf ${ERROR_PATH}/error.log
