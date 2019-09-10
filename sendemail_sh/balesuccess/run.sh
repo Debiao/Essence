@@ -10,18 +10,21 @@ password='crnfstwdzeracaeb' #发件箱密码
 SMTP_server='smtp.qq.com' #发件箱对应的stmp服务器
 
 DIS_NAME=$(grep -i 'dis_500outgpc.ipa' ${XCODE_LOGFILE_PATH}/error.log)
+
 DEV_NAME=$(grep -i 'dev_500outgpc.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 
-if [ DIS_NAME="dis_500outgpc.ipa" ];then
+
+if [ -n "$DIS_NAME" ];then
     PK_NAME="500outgpc(正式服)"
-fi
-if [ DEV_NAME="dev_500outgpc.ipa" ];then
+else
+    if [ -n "$DEV_NAME" ];then
     PK_NAME="500outgpc(测试服)"
+    fi
 fi
 
 #收件邮箱
 SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
-if [ SUCCESS_NAME="Push successful." ];then
+if [ -n "$SUCCESS_NAME" ];then
 subject=项目打包 #第二个参数(主题)
 contentone=${PK_NAME}
 contenttwo="https://zt.gzxstech.com/50x.html"
@@ -32,10 +35,10 @@ sendemail -f $account -t $to -s $SMTP_server -u $subject -o message-content-type
 done
 else
 subject=项目打包 #第二个参数(主题)
-content=${PK_NAME}"打包失败!!!(请联系管理员---15966817776)"
+content=${PK_NAME}"<br>""打包失败!!!(请联系管理员---15966817776)"
 for to in ${array[@]}
 do
-sendsemail -f $account -t $to -s $SMTP_server -u $subject -o message-content-type=html -o message-charset=utf-8 -xu $account -xp $password -m $content
+sendemail -f $account -t $to -s $SMTP_server -u $subject -o message-content-type=html -o message-charset=utf-8 -xu $account -xp $password -m $content
 done
 fi
 
