@@ -2,7 +2,7 @@
 #set -ex 调试命令
 #报错直接停止
 set -e     
-TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
+TIME=$(date "+%Y-%m-%d-%H-%M-%S--")
 ERROR_PATH=/Users/mac/Documents/temporary/log/xcode
 #<------------------------------------------------> 
 
