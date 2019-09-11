@@ -15,6 +15,9 @@ DEV_NAME=$(grep -i 'dev_500outgpc.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 DIS_500CAI_NAME=$(grep -i 'dis_500cai.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 DEV_500CAI_NAME=$(grep -i 'dev_500cai.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 
+DIS_500OUT_NAME=$(grep -i 'dis_500out.ipa' ${XCODE_LOGFILE_PATH}/error.log)
+DEV_500OUT_NAME=$(grep -i 'dev_500out.ipa' ${XCODE_LOGFILE_PATH}/error.log)
+
 if [ -n "$DIS_NAME" ];then
     PK_NAME="500outgpc(正式服)"
 else
@@ -28,6 +31,14 @@ if [ -n "$DIS_500CAI_NAME" ];then
 else
     if [ -n "$DEV_500CAI_NAME" ];then
     PK_NAME="500cai(测试服)"
+    fi
+fi
+
+if [ -n "$DIS_500OUT_NAME" ];then
+    PK_NAME="500out(正式服)"
+else
+    if [ -n "$DEV_500OUT_NAME" ];then
+    PK_NAME="500out(测试服)"
     fi
 fi
 

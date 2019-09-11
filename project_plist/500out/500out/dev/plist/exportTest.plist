@@ -4,8 +4,8 @@
 <dict>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.500CaiMas.dis</key>
-		<string>500CaiMas_dis</string>
+		<key>com.cp500out.dev</key>
+		<string>dev_500out</string>
 	</dict>
 	<key>method</key>
 	<string>ad-hoc</string>

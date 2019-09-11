@@ -8,33 +8,33 @@ TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
 #<------------------------------------------------>                  
 # 上传服务器时用
 #Ipa默认包名
-IPA_NAME=dis_500outgpc.ipa  
+IPA_NAME=dis_500out.ipa  
 #远程服务器上的路径
-SERVER_PATH=/data/ios/500out/500outgpc        
+SERVER_PATH=/data/ios/500out/500out       
 #<------------------------------------------------>  
 
 
 #编译cordova路径
-NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outgpc_dis    # <---------------这里需要修改
+NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500out_dis   # <---------------这里需要修改
 cd ${NPM_RUN_PATH}
 npm run ios-min
 
 #<------------------------------------------------> 
 # 打包api时用
 #工程名
-PROJECT_NAME=股彩    # <---------------这里需要修改
+PROJECT_NAME=500OUT    # <---------------这里需要修改
 #scheme名
-SCHEME_NAME=股彩    # <---------------这里需要修改
+SCHEME_NAME=500OUT    # <---------------这里需要修改
 #<------------------------------------------------> 
 
 
 # 打包时用
 #IOS工程路径
-IOS_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outgpc_dis/platforms/ios       # <---------------这里需要修改
+IOS_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500out_dis/platforms/ios       # <---------------这里需要修改
 #判断IPA是否存在路径
 IPADir_PATH=${IOS_PATH}/IPADir/Debug   # <---------------这里需要修改
 #Plist所在路径
-PLIST_PATH=/Users/mac/Documents/workspace/Essence/project_plist/500out/500outgpc/dis/plist/       # <---------------这里需要修改
+PLIST_PATH=/Users/mac/Documents/workspace/Essence/project_plist/500out/500out/dis/plist/       # <---------------这里需要修改
 
 #<------------------------------------------------> 
 
