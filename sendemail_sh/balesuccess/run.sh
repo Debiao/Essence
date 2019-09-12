@@ -2,8 +2,8 @@
 
 #script name : sendemail.sh
 XCODE_LOGFILE_PATH=/Users/mac/Documents/temporary/log/xcode
-# 2200170656@qq.com 丘 sunshuo_1990@126.com 30m_3c4sifuum@dingtalk.com 智冲
-array=(qiuduan6119@dingtalk.com 2677866009@qq.com sunshuo_1990@126.com 613623@qq.com)
+# 2200170656@qq.com 丘 613623@qq.com
+array=(Angelo@gzxstech.com 2677866009@qq.com sunshuo_1990@126.com Tanny@gzxstech.com David@gzxstech.com rex@gzxstech.com Ade@gzxstech.com Jie.Li@gzxstech.com Lucy@gzxstech.com Weidong@gzxstech.com)
 # array=(sunshuo_1990@126.com)
 account='448966707@qq.com' #发件箱
 password='crnfstwdzeracaeb' #发件箱密码
