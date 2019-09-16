@@ -5,7 +5,7 @@ set -e
 TIME=$(date "+%Y-%m-%d-%H-%M-%S--")
 ERROR_PATH=/Users/mac/Documents/temporary/log/xcode
 #<------------------------------------------------> 
-
+find ${ERROR_PATH} -mtime +2 -name "*.log" -exec rm -rf {} \;
 if [ -f ${ERROR_PATH}/error.log ];then
         cp ${ERROR_PATH}/error.log ${ERROR_PATH}/${TIME}error.log
         rm -rf ${ERROR_PATH}/error.log
