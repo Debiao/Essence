@@ -32,12 +32,10 @@ set timeout 360
 spawn ssh root@${db_data_ip}
 expect "#" {send "cd ${db_data_path}\r"}
 # expect "#" {send "curl -o ${select_sql_name}.ipa ${db_data_image}\r"}
-# expect "#" {send "wget --debug  ${db_data_image} --user-agent="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"\r"}
-# expect "#" {send "wget http://zt.gzxstech.com:666/upload/53eefbfebd91fc17/33c21c45ae7a1725.ipa --user-agent=\"Mozilla/5.0(WindowsNT6.1;WOW64)AppleWebKit/537.22(KHTML,likeGecko)Chrome/25.0.1364.172Safari/537.22\"\r"}
-
+expect "#" {send "wget --no-check-certificate 192.168.3.70:8000/upload/53eefbfebd91fc17/33c21c45ae7a1725.ipa\r"}
+# expect "#" {send "wget http://zt.gzxstech.com:666/upload/53eefbfebd91fc17/33c21c45ae7a1725.ipa\r"}
 expect "#" {send "exit\r"}
 EOF
-
 
 echo "push successful"
 
