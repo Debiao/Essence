@@ -33,10 +33,28 @@ expect << EOF
 set timeout 360
 spawn ssh root@${db_data_ip}
 expect "#" {send "cd ${db_data_path}\r"}
-# expect "password:" {send "${db_data_pwd}\r"}
 expect "#" {send "wget -O ${select_sql_name}.ipa --no-proxy --no-cookies --no-check-certificate ${db_data_image}\r"}
 expect "#" {send "exit\r"}
 EOF
+
+# if [ read -p "192.168.3.11" $db_data_ip ];then
+# expect << EOF
+# set timeout 360
+# spawn ssh root@${db_data_ip}
+# expect "#" {send "cd ${db_data_path}\r"}
+# expect "#" {send "wget -O ${select_sql_name}.ipa --no-proxy --no-cookies --no-check-certificate ${db_data_image}\r"}
+# expect "#" {send "exit\r"}
+# EOF
+# else
+# expect << EOF
+# set timeout 360
+# spawn ssh root@${db_data_ip}
+# expect "#" {send "cd ${db_data_path}\r"}
+# expect "password:" {send "${db_data_pwd}\r"}
+# expect "#" {send "wget -O ${select_sql_name}.ipa --no-proxy --no-cookies --no-check-certificate ${db_data_image}\r"}
+# expect "#" {send "exit\r"}
+# EOF
+# fi
 
 echo "push successful"
 
