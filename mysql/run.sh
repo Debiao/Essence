@@ -26,14 +26,15 @@ db_data_image=`/usr/local/mysql/bin/mysql -h ${HOSTNAME} -P${PORT} -u${USERNAME}
 select_sql_name=`/usr/local/mysql/bin/mysql -h ${HOSTNAME} -P${PORT} -u${USERNAME} -p${PASSWORD}  ${DBNAME} -e "${select_sql_name}" | awk 'NR>1'`
 
 
+#wget -o ${select_sql_name}.ipa --no-proxy --no-cookies --no-check-certificate https://zt.gzxstech.com/ios/500out/500outgpc/dis_500outgpc.ipa
+#expect "#" {send "curl -o ${select_sql_name}.ipa ${db_data_image}\r"}
 
 expect << EOF
 set timeout 360
 spawn ssh root@${db_data_ip}
 expect "#" {send "cd ${db_data_path}\r"}
-# expect "#" {send "curl -o ${select_sql_name}.ipa ${db_data_image}\r"}
-expect "#" {send "wget --no-check-certificate 192.168.3.70:8000/upload/53eefbfebd91fc17/33c21c45ae7a1725.ipa\r"}
-# expect "#" {send "wget http://zt.gzxstech.com:666/upload/53eefbfebd91fc17/33c21c45ae7a1725.ipa\r"}
+# expect "password:" {send "${db_data_pwd}\r"}
+expect "#" {send "wget -O ${select_sql_name}.ipa --no-proxy --no-cookies --no-check-certificate ${db_data_image}\r"}
 expect "#" {send "exit\r"}
 EOF
 
