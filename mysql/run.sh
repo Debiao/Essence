@@ -31,6 +31,13 @@ db_data_port=`/usr/local/mysql/bin/mysql -h ${HOSTNAME} -P${PORT} -u${USERNAME} 
 #wget -o ${select_sql_name}.ipa --no-proxy --no-cookies --no-check-certificate https://zt.gzxstech.com/ios/500out/500outgpc/dis_500outgpc.ipa
 #expect "#" {send "curl -o ${select_sql_name}.ipa ${db_data_image}\r"}
 
+if [ "$db_data_user" = "root"]; then
+CAPTURESYMBOL="#"
+else
+CAPTURESYMBOL="~"
+fi
+
+
 strA="$db_data_image"
 strB="upload"
 # echo $strA
@@ -67,20 +74,20 @@ fi
 else
 if [ -n "$result" ]; then
 # echo "yes"
-
 expect << EOF
 set timeout 360
-spawn scp -r -p $db_data_port /Users/mac/Documents/workspace/Rabbit/public/upload${strA#*upload} $db_data_user@$db_data_ip:$db_data_path 
+spawn scp -r -P $db_data_port /Users/mac/Documents/workspace/Rabbit/public/upload${strA#*upload} $db_data_user@$db_data_ip:$db_data_path 
 expect "password:" {send "${db_data_pwd}\r"}
-expect "~" {send "exit\r"}
+expect "$CAPTURESYMBOL" {send "exit\r"}
 EOF
+echo $CAPTURESYMBOL
 expect << EOF
 set timeout 360
 spawn ssh $db_data_user@${db_data_ip} -p $db_data_port
 expect "password:" {send "${db_data_pwd}\r"}
-expect "~" {send "cd ${db_data_path}\r"}
-expect "~" {send "mv ${strA##*/} $db_data_name.ipa\r"}
-expect "~" {send "exit\r"}
+expect $CAPTURESYMBOL {send "cd ${db_data_path}\r"}
+expect $CAPTURESYMBOL {send "mv ${strA##*/} $db_data_name.ipa\r"}
+expect ${db_data_path} {send "exit\r"}
 EOF
 else
 # echo "no"
@@ -88,9 +95,9 @@ expect << EOF
 set timeout 360
 spawn ssh $db_data_user@${db_data_ip} -p $db_data_port
 expect "password:" {send "${db_data_pwd}\r"}
-expect "~" {send "cd /tmp\r\r"}
-expect "~" {send "wget -O ${db_data_name}.ipa --no-proxy --no-cookies --no-check-certificate ${db_data_image}\r"}
-expect "~" {send "exit\r"}
+expect $CAPTURESYMBOL {send "cd /${db_data_path}\r"}
+expect $CAPTURESYMBOL {send "wget -O ${db_data_name}.ipa --no-proxy --no-cookies --no-check-certificate ${db_data_image}\r"}
+expect ${db_data_path} {send "exit\r"}
 EOF
 fi
 fi
