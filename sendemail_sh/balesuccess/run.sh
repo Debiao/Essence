@@ -21,6 +21,9 @@ DEV_500OUT_NAME=$(grep -i 'dev_500out.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 DIS_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 DEV_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 
+DIS_SKYCASH_NAME=$(grep -i 'dis_skycash.ipa' ${XCODE_LOGFILE_PATH}/error.log)
+
+
 if [ -n "$DIS_NAME" ];then
     PK_NAME="500outgpc(正式服)"
 else
@@ -52,6 +55,16 @@ else
     PK_NAME="股彩土楼(测试服)"
     fi
 fi
+
+if [ -n "$DIS_SKYCASH_NAME" ];then
+    PK_NAME="skycash(正式服)"
+else
+    if [ -n "$DEV_500OUTTLGPC_NAME" ];then
+    PK_NAME="skycash(测试服)"
+    fi
+fi
+
+
 #收件邮箱
 SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 if [ -n "$SUCCESS_NAME" ];then
