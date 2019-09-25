@@ -18,6 +18,7 @@ SERVER_PATH=/data/Android/500out/500outtlgpc
 # #编译cordova路径
 NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500outtlgpc_dis    # <---------------这里需要修改
 cd ${NPM_RUN_PATH}
+
 npm run android-build
 
 #<------------------------------------------------> 
@@ -66,15 +67,6 @@ expect << EOF
     spawn scp -r ${APK_PATH}/${APN_NEW_NAME} root@zt.gzxstech.com:${SERVER_PATH}
     expect "#" {send "exit\r"}
 EOF
-# expect << EOF
-#     set timeout 360
-#     spawn 
-#     expect "#" {send "exit\r"}
-# EOF
-
-
-
-
         if [ $? -ne 0 ];then
                 echo "Error,please try again."
                 exit
