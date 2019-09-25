@@ -2,6 +2,7 @@
 
 #script name : sendemail.sh
 XCODE_LOGFILE_PATH=/Users/mac/Documents/temporary/log/xcode
+ANDROID_LOGFILE_PATH=/Users/mac/Documents/temporary/log/Android
 # 2200170656@qq.com 丘 613623@qq.com
 array=(Angelo@gzxstech.com 2677866009@qq.com sunshuo_1990@126.com Tanny@gzxstech.com  rex@gzxstech.com Ade@gzxstech.com Lucy@gzxstech.com Weidong@gzxstech.com)
 # array=(sunshuo_1990@126.com)
@@ -22,6 +23,10 @@ DIS_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.ipa' ${XCODE_LOGFILE_PATH}/error
 DEV_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 
 DIS_SKYCASH_NAME=$(grep -i 'dis_skycash.ipa' ${XCODE_LOGFILE_PATH}/error.log)
+
+DIS_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+
+
 
 
 if [ -n "$DIS_NAME" ];then
@@ -61,6 +66,14 @@ if [ -n "$DIS_SKYCASH_NAME" ];then
 else
     if [ -n "$DEV_500OUTTLGPC_NAME" ];then
     PK_NAME="skycash(测试服)"
+    fi
+fi
+
+if [ -n "$DIS_ANDROID_500OUTTLGPC_NAME" ];then
+    PK_NAME="股彩土楼(安卓正式服)"
+else
+    if [ -n "$DEV_500OUTTLGPC_NAME" ];then
+    PK_NAME="股彩土楼(测试服)"
     fi
 fi
 
