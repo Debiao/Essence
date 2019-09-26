@@ -1,47 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>内部测试</title>
-    <meta  charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <style>
-        /* html, body {
-        margin: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    } */
-        body {
-            width: auto;
-            margin: 0 auto;
-            padding:0;
-             /* 适配齐刘海*/
-            padding-top: constant(safe-area-inset-top);  
-            /* 适配底部黑条*/
-             padding-bottom: constant(safe-area-inset-bottom);
-        } 
-        .install{
-            margin-left: 15px;
-            margin-right: 10px;
-            margin-top: 5px;
-            position: absolute;
-        }
-        .install1{
-            clear:both;
-            margin-left: 15px;
-            margin-right: 10px;
-            margin-top: 500px;
-            position: absolute;
-        }
-
-       .down {
-            margin-left: 15px;
-            margin-top: 950px;
-            padding-bottom: 100px;
-            position: absolute;
-        }
-
-      
-        .link_button {
+  <title>内部测试</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .link_button {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -56,8 +23,7 @@
     text-decoration: none;
     line-height: 50px;
 }
-
-.link_button1 {
+    .link_button1 {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -73,101 +39,75 @@
     line-height: 50px;
 
 }
-
-    </style>
+  </style>
 </head>
-
 <body>
-    <div class="install">
-        <p style="font-size: 18px; color: #F00">测试人员安装教程如下方法:</p>
-        <p style="font-size: 28px; color:teal">测试服务器:</p>
-        <p style="font-size: 18px; color:#4479BA">苹果方法一:请使用苹果手机的Safari打开连接,点击安装测试包.</p>
-
-        <div style="height: 80px">
-            <!-- <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/bdcfapp/dev_bdcfapp.plist" class="link_button">bdcfapp</a> -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/bdcfapp/dev_bdcfapp.plist" class="link_button">skycash</a>
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500out/dev_500out.plist" class="link_button">500out</a>
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500cai/dev_500cai.plist" class="link_button">500cai</a>
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outgpc/dev_500outgpc.plist" class="link_button">500outgpc</a>
-            <!-- <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500caimas/dev_500caimas.plist" class="link_button">500caimas</a> -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outtlgpc/dev_500outtlgpc.plist" class="link_button">股彩土楼</a>
-
+        <!-- ①②③④⑤⑥⑦⑧⑨⑩ -->
+<div class="container">
+  <div class="jumbotron">
+    <h3>使用安装教程方法如下:</h3>
+    <p>一.简要说明:</p> 
+    <p>① 服务器: 分正式服务器和测试服务器.</p>
+    <p>② 苹果手机: 请使用苹果手机自带的Safari打开链接,点击安装测试包.</p>
+    <p>③ 安卓手机: 请使用手机浏览器打开链接,点击安装测试包.</p>
+    <p>④ 苹果未签名包下载:请使用任意浏览器点击可以直接下载.</p>
+  </div>
+  
+   <h3>苹果区</h3>
+  
+   <div class="row">
+        <div class="col-sm-6">
+            <h4>正试服</h4>
+            <div class="jumbotron">
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/bdcfapp/skycash/dis_skycash.plist" class='btn btn-primary ' style="margin-bottom: 9px">skycash</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500out/dis_500out.plist" class='btn btn-primary ' style="margin-bottom: 9px">500out</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500cai/dis_500cai.plist" class='btn btn-primary ' style="margin-bottom: 9px">500cai</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outgpc/dis_500outgpc.plist" class='btn btn-primary ' style="margin-bottom: 9px">500outgpc</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outtlgpc/dis_500outtlgpc.plist" class='btn btn-primary ' style="margin-bottom: 9px">股彩土楼</a>
+            </div>   
         </div>
-        
-      
-        <div style="margin-top: 50px">
-        <p style="font-size: 18px; color:green">安卓方法一:点击安装测试包.</p>
-        <a href="https://zt.gzxstech.com/Android/bdcfapp/skycash/dev_skycash.apk" class="link_button1">skycash</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500out/dev_500out.apk" class="link_button1">500out</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500cai/dev_500cai.apk" class="link_button1">500cai</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500outgpc/dev_500outgpc.apk" class="link_button1">500outgpc</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500outtlgpc/dev_500outtlgpc.apk" class="link_button1">股彩土楼</a>
-        <br />
+        <div class="col-sm-6">
+           <h4>测试服</h4>
+            <div class="jumbotron">
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/bdcfapp/dev_bdcfapp.plist" class='btn btn-success ' style="margin-bottom: 9px">skycash</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500out/dev_500out.plist" class='btn btn-success ' style="margin-bottom: 9px">500out</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500cai/dev_500cai.plist" class='btn btn-success ' style="margin-bottom: 9px">500cai</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outgpc/dev_500outgpc.plist" class='btn btn-success ' style="margin-bottom: 9px">500outgpc</a>
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outtlgpc/dev_500outtlgpc.plist" class='btn btn-success ' style="margin-bottom: 9px">股彩土楼</a>
+            </div>
         </div>
+  </div>
+  <h3>安卓区</h3>
+  <div class="row">
+        <div class="col-sm-6">
+            <h4>正试服</h4>
+            <div class="jumbotron">
+                <a href="https://zt.gzxstech.com/Android/bdcfapp/skycash/dis_skycash.apk" class='btn btn-primary ' style="margin-bottom: 9px">skycash</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500out/dis_500out.apk" class='btn btn-primary ' style="margin-bottom: 9px">500out</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500cai/dis_500cai.apk" class='btn btn-primary ' style="margin-bottom: 9px">500cai</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500outgpc/dis_500outgpc.apk" class='btn btn-primary ' style="margin-bottom: 9px">500outgpc</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500outtlgpc/dis_500outtlgpc.apk" class='btn btn-primary ' style="margin-bottom: 9px">股彩土楼</a>
+            </div>   
+        </div>
+        <div class="col-sm-6">
+           <h4>测试服</h4>
+            <div class="jumbotron">
+                <a href="https://zt.gzxstech.com/Android/bdcfapp/skycash/dev_skycash.apk" class='btn btn-success ' style="margin-bottom: 9px">skycash</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500out/dev_500out.apk" class='btn btn-success ' style="margin-bottom: 9px">500out</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500cai/dev_500cai.apk" class='btn btn-success ' style="margin-bottom: 9px">500cai</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500outgpc/dev_500outgpc.apk" class='btn btn-success ' style="margin-bottom: 9px">500outgpc</a>
+                <a href="https://zt.gzxstech.com/Android/500out/500outtlgpc/dev_500outtlgpc.apk" class='btn btn-success ' style="margin-bottom: 9px">股彩土楼</a>
+            </div>
+        </div>
+  </div>
+  <h3>苹果未签名包下载区</h3>
+   <div class="jumbotron">
+        <a href="https://zt.gzxstech.com/ios/bdcfapp/skycash/dis_skycash.ipa" class='btn btn-primary ' style="margin-bottom: 9px">skycash</a>
+        <a href="https://zt.gzxstech.com/ios/500out/500out/dis_500out.ipa" class='btn btn-primary ' style="margin-bottom: 9px">500out</a>
+        <a href="https://zt.gzxstech.com/ios/500out/500cai/dis_500cai.ipa" class='btn btn-primary ' style="margin-bottom: 9px">500cai</a>
+        <a href="https://zt.gzxstech.com/ios/500out/500outgpc/dis_500outgpc.ipa" class='btn btn-primary ' style="margin-bottom: 9px">500outgpc</a>
+         <a href="https://zt.gzxstech.com/ios/500out/500outtlgpc/dis_500outtlgpc.ipa" class='btn btn-primary ' style="margin-bottom: 9px">股彩土楼</a>
     </div>
-
-
-    
-
-    <div class="install1">
-        <p style="font-size: 28px; color:teal">正式服务器:</p>
-        <p style="font-size: 18px; color:#4479BA">苹果方法一:请使用苹果手机的Safari打开连接,点击安装测试包.</p>
-
-        <div style="height: 80px">
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/bdcfapp/skycash/dis_skycash.plist" class="link_button">skycash</a>
-            <!-- <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/bdcfapp/dis_bdcfapp.plist" class="link_button">bdcfapp</a> -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500out/dis_500out.plist" class="link_button">500out</a>
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500cai/dis_500cai.plist" class="link_button">500cai</a>
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outgpc/dis_500outgpc.plist" class="link_button">500outgpc</a>
-            <!-- <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500caimas/dis_500caimas.plist" class="link_button">500caimas</a> -->
-            <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/Debiao/Essence/master/github_plist/500out/500outtlgpc/dis_500outtlgpc.plist" class="link_button">股彩土楼</a>
-        </div>
-
-        <div style="margin-top: 50px">
-        <p style="font-size: 18px; color:green">安卓方法一:点击安装测试包.</p>
-        <a href="https://zt.gzxstech.com/Android/bdcfapp/skycash/dis_skycash.apk" class="link_button1">skycash</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500out/dis_500out.apk" class="link_button1">500out</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500cai/dis_500cai.apk" class="link_button1">500cai</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500outgpc/dis_500outgpc.apk" class="link_button1">500outgpc</a>
-        <a href="https://zt.gzxstech.com/Android/500out/500outtlgpc/dis_500outtlgpc.apk" class="link_button1">股彩土楼</a>
-        <br />
-        </div>
-    </div>
-
-    
-    <div class="down">
-        <p style="font-size: 28px;color:teal">
-            苹果未签名包下载:
-        </p>
-        <div style="height: 80px">
-            <!-- <a href="https://zt.gzxstech.com/ios/bdcfapp/dis_bdcfapp.ipa" class="link_button">bdcfapp</a> -->
-            <a href="https://zt.gzxstech.com/ios/bdcfapp/skycash/dis_skycash.ipa" class="link_button">skycash</a>
-            <a href="https://zt.gzxstech.com/ios/500out/500out/dis_500out.ipa" class="link_button">500out</a>
-            <a href="https://zt.gzxstech.com/ios/500out/500cai/dis_500cai.ipa" class="link_button">500cai</a>
-            <a href="https://zt.gzxstech.com/ios/500out/500outgpc/dis_500outgpc.ipa" class="link_button">500outgpc</a>
-            <!-- <a href="https://zt.gzxstech.com/ios/500out/500caimas/dis_500caimas.ipa" class="link_button">500caimas</a> -->
-            <br>
-            <a href="https://zt.gzxstech.com/ios/500out/500outtlgpc/dis_500outtlgpc.ipa" class="link_button">股彩土楼</a>
-        </div>
-     
-    </div>
-
+</div>
 </body>
-
 </html>
-<script type="text/javascript">
-        function resizeRem() {
-        if (window.innerWidth < window.innerHeight)
-        {
-            var html = document.querySelector('html');
-            var rem = html.offsetHeight / 10.80;
-            html.style.fontSize = rem + "px";
-        }
-        else {
-            var html = document.querySelector('html');
-            var rem = html.offsetWidth / 19.20;
-            html.style.fontSize = rem + "px";
-        }
-    }
-</script>
-
