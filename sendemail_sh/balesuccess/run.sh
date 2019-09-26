@@ -27,8 +27,6 @@ DIS_SKYCASH_NAME=$(grep -i 'dis_skycash.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 DIS_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
 
 
-
-
 if [ -n "$DIS_NAME" ];then
     PK_NAME="500outgpc(正式服)"
 else
@@ -72,7 +70,7 @@ fi
 if [ -n "$DIS_ANDROID_500OUTTLGPC_NAME" ];then
     PK_NAME="股彩土楼(安卓正式服)"
 else
-    if [ -n "$DEV_500OUTTLGPC_NAME" ];then
+    if [ -n "$DEV_ANDROID_500OUTTLGPC_NAME" ];then
     PK_NAME="股彩土楼(测试服)"
     fi
 fi
