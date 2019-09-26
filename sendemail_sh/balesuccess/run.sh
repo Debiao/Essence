@@ -25,53 +25,53 @@ DEV_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.ipa' ${XCODE_LOGFILE_PATH}/error
 DIS_SKYCASH_NAME=$(grep -i 'dis_skycash.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 
 DIS_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
-
+DEV_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
 
 if [ -n "$DIS_NAME" ];then
-    PK_NAME="500outgpc(正式服)"
+    PK_NAME="500outgpc(苹果-正式服)"
 else
     if [ -n "$DEV_NAME" ];then
-    PK_NAME="500outgpc(测试服)"
+    PK_NAME="500outgpc(苹果-测试服)"
     fi
 fi
 
 if [ -n "$DIS_500CAI_NAME" ];then
-    PK_NAME="500cai(正式服)"
+    PK_NAME="500cai(苹果-正式服)"
 else
     if [ -n "$DEV_500CAI_NAME" ];then
-    PK_NAME="500cai(测试服)"
+    PK_NAME="500cai(苹果-测试服)"
     fi
 fi
 
 if [ -n "$DIS_500OUT_NAME" ];then
-    PK_NAME="500out(正式服)"
+    PK_NAME="500out(苹果-正式服)"
 else
     if [ -n "$DEV_500OUT_NAME" ];then
-    PK_NAME="500out(测试服)"
+    PK_NAME="500out(苹果-测试服)"
     fi
 fi
 
 if [ -n "$DIS_500OUTTLGPC_NAME" ];then
-    PK_NAME="股彩土楼(正式服)"
+    PK_NAME="股彩土楼(苹果-正式服)"
 else
     if [ -n "$DEV_500OUTTLGPC_NAME" ];then
-    PK_NAME="股彩土楼(测试服)"
+    PK_NAME="股彩土楼(苹果-测试服)"
     fi
 fi
 
 if [ -n "$DIS_SKYCASH_NAME" ];then
-    PK_NAME="skycash(正式服)"
+    PK_NAME="skycash(苹果-正式服)"
 else
     if [ -n "$DEV_500OUTTLGPC_NAME" ];then
-    PK_NAME="skycash(测试服)"
+    PK_NAME="skycash(苹果-测试服)"
     fi
 fi
 
 if [ -n "$DIS_ANDROID_500OUTTLGPC_NAME" ];then
-    PK_NAME="股彩土楼(安卓正式服)"
+    PK_NAME="股彩土楼(安卓-正式服)"
 else
     if [ -n "$DEV_ANDROID_500OUTTLGPC_NAME" ];then
-    PK_NAME="股彩土楼(测试服)"
+    PK_NAME="股彩土楼(安卓-测试服)"
     fi
 fi
 
