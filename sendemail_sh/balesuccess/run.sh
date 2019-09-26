@@ -27,6 +27,9 @@ DIS_SKYCASH_NAME=$(grep -i 'dis_skycash.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 DIS_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
 DEV_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
 
+DIS_ANDROID_500OUTGPC_NAME=$(grep -i 'dis_500outgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+DEV_ANDROID_500OUTGPC_NAME=$(grep -i 'dev_500outgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+
 if [ -n "$DIS_NAME" ];then
     PK_NAME="500outgpc(苹果-正式服)"
 else
@@ -74,6 +77,17 @@ else
     PK_NAME="股彩土楼(安卓-测试服)"
     fi
 fi
+
+
+if [ -n "$DIS_ANDROID_500OUTGPC_NAME" ];then
+    PK_NAME="股彩(安卓-正式服)"
+else
+    if [ -n "$DEV_ANDROID_500OUTGPC_NAME" ];then
+    PK_NAME="股彩(安卓-测试服)"
+    fi
+fi
+
+
 
 
 #收件邮箱
