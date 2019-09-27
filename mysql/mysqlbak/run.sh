@@ -15,10 +15,10 @@ cd $BACKUP_DIR
 #使用mysqldump 命令备份制定数据库，并以格式化的时间戳命名备份文件
 mysqldump $OPTIONS > $DUMPFILE
 
-cd $GIT_PATH
-git add .
-git commit -m "${DATE}"
-git push
-exit 0
+# cd $GIT_PATH
+# git add .
+# git commit -m "${DATE}"
+# git push
+# exit 0
 #清理过期文件
 #find $BACKUP_DIR -type f -name "*.tgz" -exec rm -rf {} \;
