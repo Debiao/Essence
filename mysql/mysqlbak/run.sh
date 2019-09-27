@@ -20,7 +20,13 @@ git add .
 git commit -m "${DATE}"
 git push
 
-sudo shutdown -h now
+expect << EOF
+set timeout 360
+spawn sudo shutdown -h now
+expect "*Password:" {send "7894563\r"}
+expect "#" {send "exit\r"}
+EOF
+
 exit 0
 #清理过期文件
 #find $BACKUP_DIR -type f -name "*.tgz" -exec rm -rf {} \;
