@@ -16,7 +16,7 @@ SERVER_PATH=/data/Android/500out/500out
 
 
 # #编译cordova路径
-NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500out_dev    # <---------------这里需要修改
+NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/game/web/WEB_APP_500out_dev   # <---------------这里需要修改
 cd ${NPM_RUN_PATH}
 
 npm run android-build
