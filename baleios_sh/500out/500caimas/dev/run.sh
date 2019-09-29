@@ -123,7 +123,7 @@ echo '///----------'
 echo '/// ipa包已导出'
 echo '///----------'
 echo ''
-open $exportIpaPath
+# open $exportIpaPath
 else
 echo '///-------------'
 echo '/// ipa包导出失败 '
@@ -168,7 +168,7 @@ echo '/// 发布完成'
 echo '///-------------'
 echo ''
 
-open -a "/Applications/Google Chrome Canary.app" http://192.168.3.11/50.html
+# open -a "/Applications/Google Chrome Canary.app" http://192.168.3.11/50.html
 fi
 
 echo ''

@@ -133,7 +133,7 @@ echo '///----------'
 echo '/// ipa包已导出'
 echo '///----------'
 echo ''
-open $exportIpaPath
+# open $exportIpaPath
 else
 echo '///-------------'
 echo '/// ipa包导出失败 '
@@ -178,7 +178,7 @@ echo '/// 发布完成'
 echo '///-------------'
 echo ''
 
-open -a /Applications/Google\ Chrome.app https://zt.gzxstech.com/50x.html
+# open -a /Applications/Google\ Chrome.app https://zt.gzxstech.com/50x.html
 
 
 echo ''
