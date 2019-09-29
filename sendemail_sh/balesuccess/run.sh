@@ -25,100 +25,83 @@ DEV_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.ipa' ${XCODE_LOGFILE_PATH}/error
 DIS_SKYCASH_NAME=$(grep -i 'dis_skycash.ipa' ${XCODE_LOGFILE_PATH}/error.log)
 
 
+# DIS_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+# DEV_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
 
-DIS_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dis_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
-DEV_ANDROID_500OUTTLGPC_NAME=$(grep -i 'dev_500outtlgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+# DIS_ANDROID_500OUTGPC_NAME=$(grep -i 'dis_500outgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+# DEV_ANDROID_500OUTGPC_NAME=$(grep -i 'dev_500outgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
 
-DIS_ANDROID_500OUTGPC_NAME=$(grep -i 'dis_500outgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
-DEV_ANDROID_500OUTGPC_NAME=$(grep -i 'dev_500outgpc.apk' ${ANDROID_LOGFILE_PATH}/error.log)
-
-DIS_ANDROID_500OUT_NAME=$(grep -i 'dis_500out.apk' ${ANDROID_LOGFILE_PATH}/error.log)
-DEV_ANDROID_500OUT_NAME=$(grep -i 'dev_500out.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+# DIS_ANDROID_500OUT_NAME=$(grep -i 'dis_500out.apk' ${ANDROID_LOGFILE_PATH}/error.log)
+# DEV_ANDROID_500OUT_NAME=$(grep -i 'dev_500out.apk' ${ANDROID_LOGFILE_PATH}/error.log)
 
 if [ -n "$DIS_NAME" ];then
     PK_NAME="500outgpc(苹果-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 else
     if [ -n "$DEV_NAME" ];then
     PK_NAME="500outgpc(苹果-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
     fi
 fi
 
 if [ -n "$DIS_500CAI_NAME" ];then
     PK_NAME="500cai(苹果-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 else
     if [ -n "$DEV_500CAI_NAME" ];then
     PK_NAME="500cai(苹果-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
     fi
 fi
 
 if [ -n "$DIS_500OUT_NAME" ];then
     PK_NAME="500out(苹果-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 else
     if [ -n "$DEV_500OUT_NAME" ];then
     PK_NAME="500out(苹果-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
     fi
 fi
 
 if [ -n "$DIS_500OUTTLGPC_NAME" ];then
     PK_NAME="股彩土楼(苹果-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 else
     if [ -n "$DEV_500OUTTLGPC_NAME" ];then
     PK_NAME="股彩土楼(苹果-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
     fi
 fi
 
 if [ -n "$DIS_SKYCASH_NAME" ];then
     PK_NAME="skycash(苹果-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 else
     if [ -n "$DEV_500OUTTLGPC_NAME" ];then
     PK_NAME="skycash(苹果-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
     fi
 fi
 
-if [ -n "$DIS_ANDROID_500OUTTLGPC_NAME" ];then
-    PK_NAME="股彩土楼(安卓-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${ANDROID_LOGFILE_PATH}/error.log)
-else
-    if [ -n "$DEV_ANDROID_500OUTTLGPC_NAME" ];then
-    PK_NAME="股彩土楼(安卓-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${ANDROID_LOGFILE_PATH}/error.log)
-    fi
-fi
+# if [ -n "$DIS_ANDROID_500OUTTLGPC_NAME" ];then
+#     PK_NAME="股彩土楼(安卓-正式服)"
+# else
+#     if [ -n "$DEV_ANDROID_500OUTTLGPC_NAME" ];then
+#     PK_NAME="股彩土楼(安卓-测试服)"
+#     fi
+# fi
 
 
-if [ -n "$DIS_ANDROID_500OUTGPC_NAME" ];then
-    PK_NAME="股彩(安卓-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${ANDROID_LOGFILE_PATH}/error.log)
-else
-    if [ -n "$DEV_ANDROID_500OUTGPC_NAME" ];then
-    PK_NAME="股彩(安卓-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${ANDROID_LOGFILE_PATH}/error.log)
-    fi
-fi
+# if [ -n "$DIS_ANDROID_500OUTGPC_NAME" ];then
+#     PK_NAME="股彩(安卓-正式服)"
+# else
+#     if [ -n "$DEV_ANDROID_500OUTGPC_NAME" ];then
+#     PK_NAME="股彩(安卓-测试服)"
+#     fi
+# fi
 
-if [ -n "$DIS_ANDROID_500OUT_NAME" ];then
-    PK_NAME="500OUT(安卓-正式服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${ANDROID_LOGFILE_PATH}/error.log)
-else
-    if [ -n "$DEV_ANDROID_500OUT_NAME" ];then
-    PK_NAME="500OUT(安卓-测试服)"
-    SUCCESS_NAME=$(grep -i 'Push successful.' ${ANDROID_LOGFILE_PATH}/error.log)
-    fi
-fi
+# if [ -n "$DIS_ANDROID_500OUT_NAME" ];then
+#     PK_NAME="500OUT(安卓-正式服)"
+# else
+#     if [ -n "$DEV_ANDROID_500OUT_NAME" ];then
+#     PK_NAME="500OUT(安卓-测试服)"
+#     fi
+# fi
 
 
 #收件邮箱
-# SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
+SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 if [ -n "$SUCCESS_NAME" ];then
 subject=项目打包 #第二个参数(主题)
 contentone=${PK_NAME}
