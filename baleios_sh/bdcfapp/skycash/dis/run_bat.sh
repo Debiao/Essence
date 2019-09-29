@@ -14,26 +14,26 @@ SERVER_PATH=/data/ios/bdcfapp/skycash
 #<------------------------------------------------>  
 
 
-# #编译npmbuild
-# NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/SkyCash   # <---------------这里需要修改
-# cd ${NPM_RUN_PATH}
-# npm run build
+#编译npmbuild
+NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/AWL_h5_new    # <---------------这里需要修改
+cd ${NPM_RUN_PATH}
+npm run build
 #编译cordova路径
-CORDOVA_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/SkyCash   # <---------------这里需要修改
+CORDOVA_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/AWL_APP   # <---------------这里需要修改
 cd ${CORDOVA_RUN_PATH}
 cordova build ios
 
 #<------------------------------------------------> 
 # 打包api时用
 #工程名
-PROJECT_NAME="SkyCash"    # <---------------这里需要修改
+PROJECT_NAME="Sky Cash"    # <---------------这里需要修改
 #scheme名
-SCHEME_NAME="SkyCash"     # <---------------这里需要修改
+SCHEME_NAME="Sky Cash"     # <---------------这里需要修改
 #<------------------------------------------------> 
 
 # 打包时用
 #IOS工程路径
-IOS_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/SkyCash/platforms/ios      # <---------------这里需要修改
+IOS_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/AWL_APP/platforms/ios      # <---------------这里需要修改
 #判断IPA是否存在路径
 IPADir_PATH=${IOS_PATH}/IPADir/Debug   # <---------------这里需要修改
 #Plist所在路径
@@ -181,7 +181,7 @@ echo '/// 发布完成'
 echo '///-------------'
 echo ''
 
-open -a /Applications/Google\ Chrome.app https://zt.gzxstech.com/50x.html
+# open -a /Applications/Google\ Chrome.app https://zt.gzxstech.com/50x.html
 
 
 echo ''

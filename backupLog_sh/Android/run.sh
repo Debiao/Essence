@@ -18,4 +18,4 @@ if [ -f ${ERROR_PATH}/error.log ];then
         echo '!!!' ${ERRORFILE_PATH} '不存在'
 fi 
 
-open ${ERROR_PATH}
+#open ${ERROR_PATH}
