@@ -3,7 +3,7 @@
 VERSION_FILE=/Users/mac/Documents/temporary/log/svn
 # 2200170656@qq.com 丘 sunshuo_1990@126.com
 # array=(qiuduan6119@dingtalk.com 30m_3c4sifuum@dingtalk.com sunshuo_1990@126.com)
-array=(Angelo@gzxstech.com 2677866009@qq.com sunshuo_1990@126.com Tanny@gzxstech.com  rex@gzxstech.com Ade@gzxstech.com Lucy@gzxstech.com Weidong@gzxstech.com 358758218@qq.com)
+array=(Angelo@gzxstech.com 2677866009@qq.com sunshuo_1990@126.com Tanny@gzxstech.com  rex@gzxstech.com Ade@gzxstech.com Lucy@gzxstech.com Weidong@gzxstech.com 358758218@qq.com xingfu@gzxstech.com)
 # array=(sunshuo_1990@126.com)
 account='448966707@qq.com' #发件箱
 password='crnfstwdzeracaeb' #发件箱密码
