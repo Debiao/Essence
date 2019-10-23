@@ -15,7 +15,7 @@ SERVER_PATH=/data/ios/bdcfapp/skycash
 
 
 # #编译npmbuild
-NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/AWL_h5_new   # <---------------这里需要修改
+NPM_RUN_PATH=/Users/mac/Documents/workspace/svn/500out/account/app/new_awl/SkyCash_h5  # <---------------这里需要修改
 cd ${NPM_RUN_PATH}
 npm run build
 #编译cordova路径
