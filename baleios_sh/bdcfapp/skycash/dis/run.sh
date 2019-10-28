@@ -1,7 +1,7 @@
 #! /bin/bash
 #set -ex 调试命令
 #报错直接停止
-set -e     
+# set -e     
 #获取当前时间
 TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
 

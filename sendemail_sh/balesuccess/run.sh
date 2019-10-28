@@ -4,7 +4,7 @@
 XCODE_LOGFILE_PATH=/Users/mac/Documents/temporary/log/xcode
 ANDROID_LOGFILE_PATH=/Users/mac/Documents/temporary/log/Android
 # 2200170656@qq.com 丘 613623@qq.com
-array=(Angelo@gzxstech.com 2677866009@qq.com sunshuo_1990@126.com Tanny@gzxstech.com  rex@gzxstech.com Ade@gzxstech.com Lucy@gzxstech.com Weidong@gzxstech.com 358758218@qq.com xingfu@gzxstech.com)
+array=(huiyan1123@163.com Angelo@gzxstech.com 2677866009@qq.com sunshuo_1990@126.com Tanny@gzxstech.com  rex@gzxstech.com Ade@gzxstech.com Lucy@gzxstech.com Weidong@gzxstech.com 358758218@qq.com xingfu@gzxstech.com)
 # array=(sunshuo_1990@126.com)
 account='448966707@qq.com' #发件箱
 password='crnfstwdzeracaeb' #发件箱密码
