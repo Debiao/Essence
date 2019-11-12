@@ -4,6 +4,7 @@
 set -e     
 #获取当前时间
 TIME=$(date "+%Y-%m-%d-%H-%M-%S---")
+start=$(date +%s) 
 
 #<------------------------------------------------>                  
 # 上传服务器时用
@@ -184,6 +185,9 @@ echo '/// 到此结束.'
 echo '///-------------'
 echo ''
 
+end=$(date +%s) 
+difference=$(( end - start )) 
+echo $difference seconds.
 
 
 ############## END ##############
