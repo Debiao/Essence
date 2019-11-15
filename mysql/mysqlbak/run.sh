@@ -23,7 +23,7 @@ git push
 expect << EOF
 set timeout 360
 spawn sudo shutdown -h now
-expect "*Password:" {send "7894563\r"}
+expect "*Password:" {send "s123\r"}
 expect "#" {send "exit\r"}
 EOF
 
