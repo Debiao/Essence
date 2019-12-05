@@ -153,7 +153,7 @@ if [ -f ${IPADir_PATH}/${IPA_NAME} ];then
     #expect "password:" {send "gzxs311.!@#\r"}
 expect << EOF
     set timeout 3600
-    spawn scp -r  ${IPADir_PATH}/${IPA_NAME}  root@zt.gzxstech.com:${SERVER_PATH}
+    spawn scp -r  ${IPADir_PATH}/${IPA_NAME}  root@192.168.3.11:${SERVER_PATH}
     expect "#" {send "exit\r"}
 EOF
 
