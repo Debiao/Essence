@@ -4,7 +4,7 @@
 XCODE_LOGFILE_PATH=/Users/mac/Documents/temporary/log/xcode
 ANDROID_LOGFILE_PATH=/Users/mac/Documents/temporary/log/Android
 # 2200170656@qq.com 丘 613623@qq.com
-array=(3471014019@qq.com  Angelo@gzxstech.com 2677866009@qq.com sunshuo_1990@126.com Tanny@gzxstech.com  Ade@gzxstech.com xingfu@gzxstech.com)
+array=(2668694702@qq.com 3471014019@qq.com  Angelo@gzxstech.com sunshuo_1990@126.com Tanny@gzxstech.com  Ade@gzxstech.com xingfu@gzxstech.com)
 # array=(sunshuo_1990@126.com)
 account='448966707@qq.com' #发件箱
 password='crnfstwdzeracaeb' #发件箱密码
@@ -105,7 +105,7 @@ SUCCESS_NAME=$(grep -i 'Push successful.' ${XCODE_LOGFILE_PATH}/error.log)
 if [ -n "$SUCCESS_NAME" ];then
 subject=项目打包 #第二个参数(主题)
 contentone=${PK_NAME}
-contenttwo="https://zt.gzxstech.com/50x.html"
+contenttwo="https://message.tpddns.cn/50x.html"
 content="项目名字:""<br>""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${contentone}"<br>""安装地址:""<br>""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${contenttwo}
 for to in ${array[@]}
 do

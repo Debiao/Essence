@@ -176,7 +176,7 @@ echo '/// 发布完成'
 echo '///-------------'
 echo ''
 
-# open -a /Applications/Google\ Chrome.app https://zt.gzxstech.com/50x.html
+# open -a /Applications/Google\ Chrome.app https://message.tpddns.cn/50x.html
 
 
 echo ''
