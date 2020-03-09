@@ -106,7 +106,7 @@ if [ -n "$SUCCESS_NAME" ];then
 subject=项目打包 #第二个参数(主题)
 contentone=${PK_NAME}
 contenttwo="https://message.tpddns.cn/50x.html"
-content="项目名字:""<br>""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${contentone}"<br>""安装地址:""<br>""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${contenttwo}
+content="项目名字:""<br>""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${contentone}"<br>""安装与下载地址:""<br>""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${contenttwo}
 for to in ${array[@]}
 do
 sendemail -f $account -t $to -s $SMTP_server -u $subject -o message-content-type=html -o message-charset=utf-8 -xu $account -xp $password -m $content
