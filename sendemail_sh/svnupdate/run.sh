@@ -26,7 +26,7 @@ path=${VERSION_FILE}
 files=$(ls $path)
 for filename in $files
 do
-names[${#names[@]}]="&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${filename%--*}"&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"$(grep -i "revision" ${VERSION_FILE}/$filename)"<br>"
+names[${#names[@]}]="&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${filename%--*}"&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"$(grep -i "版本" ${VERSION_FILE}/$filename)"<br>"
 # echo $(grep -i '^Updated' ${VERSION_FILE}/$filename)
 # contentone="<br>"$(grep -i '^Updated' ${VERSION_FILE}/$filename)
 done
@@ -40,7 +40,7 @@ done
 # done 
 
 contentone=${names[@]}
-contenttwo=$(grep -i "revision" ${VERSION_FILE}/error.log) #第三个参数(内容)
+contenttwo=$(grep -i "版本" ${VERSION_FILE}/error.log) #第三个参数(内容)
 content="当前版本:""<br>""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;""&nbsp;"${contenttwo}"<br>""历史版本:""<br>"${contentone}
 for to in ${array[@]}
 do
